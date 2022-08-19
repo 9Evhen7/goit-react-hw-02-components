@@ -1,9 +1,5 @@
-import styled from 'styled-components';
-
-const Wraper = styled.section`
-  margin-left: 16px;
-  max-width: fit-content;
-`;
+import PropTypes from 'prop-types';
+import { Wraper } from '../styles/sectionStyles';
 
 export const Section = ({ title, children }) => {
   return (
@@ -12,4 +8,9 @@ export const Section = ({ title, children }) => {
       {children}
     </Wraper>
   );
+};
+
+Section.propTypes = {
+  title: PropTypes.string,
+  children: PropTypes.node,
 };

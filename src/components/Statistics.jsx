@@ -1,12 +1,5 @@
-import styled from 'styled-components';
-
-const Stats = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-const Span = styled.span`
-  padding: 5px;
-`;
+import PropTypes from 'prop-types';
+import { Stats, Span } from '../styles/statisticsStyles';
 
 export const Statistics = ({
   good,
@@ -26,4 +19,12 @@ export const Statistics = ({
       </Stats>
     </>
   );
+};
+
+Statistics.propTypes = {
+  good: PropTypes.number,
+  neutral: PropTypes.number,
+  bad: PropTypes.number,
+  total: PropTypes.number,
+  positivePercentage: PropTypes.number,
 };
